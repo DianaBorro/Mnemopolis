@@ -9,17 +9,14 @@ import Header from "./components/Header.tsx";
 import Footer from "./components/Footer.tsx";
 
 function App() {
-    // State to track the active page navigation
     const [currentPage, setCurrentPage] = useState('home');
-    const {t, i18n} = useTranslation() // Initialize translation tools
+    const {t, i18n} = useTranslation() 
 
-    // Function to switch between 'en' and 'es'
     const toggleLanguage = () => {
         const nextLang = i18n.language === 'en' ? 'es' : 'en'
         i18n.changeLanguage(nextLang)
     }
 
-    // Helper to render the mock page content
     const renderPageContent = () => {
         switch (currentPage) {
             case 'memory':
@@ -72,7 +69,6 @@ function App() {
                 currentLang={i18n.language}
             />
 
-            {/* Main Dynamic Content Container */}
             <main className="main-content">
                 {renderPageContent()}
             </main>

@@ -1,3 +1,10 @@
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto; /* Keeps navigation elements clipped tightly to the right side */
+}
+
 .nav-links button {
     background: none;
     border: none;

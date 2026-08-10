@@ -1,6 +1,3 @@
-/* ==========================================
-   Dark Academia Core Theme Colors
-   ========================================== */
 :root {
   --bg-dark: #121311;         /* Deep charcoal onyx */
   --bg-card: #1c1d1a;         /* Dark slate/wood tone */
@@ -56,41 +53,7 @@ body {
 /* ==========================================
    Navigation Items
    ========================================== */
-.nav-links button {
-  background: none;
-  border: none;
-  font-family: 'Lora', serif;
-  color: var(--text-secondary);
-  padding: 10px 16px;
-  margin-left: 8px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-bottom: 2px solid transparent;
-}
 
-.nav-links button:hover,
-.nav-links button.active {
-  color: var(--accent-gold);
-  background: none !important;
-  border-bottom: 2px solid var(--accent-gold);
-}
-
-.lang-toggle-btn {
-  border: 1px solid var(--accent-gold) !important;
-  color: var(--accent-gold) !important;
-  font-family: 'Lora', serif;
-  font-size: 0.85rem !important;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 6px 14px !important;
-  margin-left: 20px !important;
-}
-
-.lang-toggle-btn:hover {
-  background-color: var(--accent-gold) !important;
-  color: var(--bg-dark) !important;
-}
 
 
 /* ==========================================
@@ -158,7 +121,3 @@ body {
   line-height: 1.8;
   color: var(--text-secondary);
 }
-
-/* Minimalist Dark Academia Footer Credits */
-
-

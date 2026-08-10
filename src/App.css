@@ -1,5 +1,3 @@
-/* src/App.css */
-
 :root {
   --bg-dark: #121311;         /* Deep charcoal onyx */
   --bg-card: #1c1d1a;         /* Dark slate/wood tone */
@@ -31,7 +29,6 @@ body {
   padding: 0;
 }
 
-/* Note: Keeping .site-header layout container rules here so it controls global grid spaces */
 .site-header {
   display: flex !important;
   justify-content: space-between !important;

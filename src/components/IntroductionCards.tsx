@@ -1,6 +1,10 @@
+import '../styles/IntroductionCards.css';
 import type {TranslatedComponentProps} from "../types.ts";
 
-function IntroductionCards({t} : TranslatedComponentProps) {
+interface IntroCardsProps extends TranslatedComponentProps {
+    setCurrentPage: (page: string) => void;
+}
+function IntroductionCards({t, setCurrentPage} : IntroCardsProps) {
     return (
         <section className="section-cards-block">
             <div className="cards-intro">
@@ -8,18 +12,18 @@ function IntroductionCards({t} : TranslatedComponentProps) {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
             </div>
             <div className="cards-grid">
-                <div className="academia-card">
+                <button className="academia-card" onClick={() => setCurrentPage('memory')}>
                     <h3>{t('nav.memory')}</h3>
                     <p>{t('pages.memory.desc')}</p>
-                </div>
-                <div className="academia-card">
+                </button>
+                <button className="academia-card" onClick={() => setCurrentPage('blog')}>
                     <h3>{t('nav.blog')}</h3>
                     <p>{t('pages.blog.desc')}</p>
-                </div>
-                <div className="academia-card">
+                </button>
+                <button className="academia-card" onClick={() => setCurrentPage('subjects')}>
                     <h3>{t('nav.subjects')}</h3>
                     <p>{t('pages.subjects.desc')}</p>
-                </div>
+                </button>
             </div>
         </section>
     )

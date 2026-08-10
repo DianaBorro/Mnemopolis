@@ -54,7 +54,7 @@ function App() {
                 return (
                     <div className="academia-wrapper">
                         <Hero t={t}/>
-                        <IntroductionCards t={t}/>
+                        <IntroductionCards t={t} setCurrentPage={setCurrentPage} />
                         <About t={t}/>
                         <Newsletter t={t}/>
                     </div>

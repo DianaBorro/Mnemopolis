@@ -1,3 +1,5 @@
+import '../styles/Hero.css';
+
 import type {TranslatedComponentProps} from '../types';
 function Hero({t} : TranslatedComponentProps) {
     return (

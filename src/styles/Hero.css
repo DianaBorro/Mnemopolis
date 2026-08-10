@@ -1,0 +1,23 @@
+.section-hero {
+    padding: 80px 24px;
+    text-align: center;
+    background-color: var(--bg-dark);
+}
+
+.hero-text-block h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.hero-text-block p {
+    color: var(--text-secondary) !important;
+    font-size: 1.2rem;
+    max-width: 650px;
+    margin: 0 auto 36px auto;
+    line-height: 1.8;
+    font-style: italic;
+}

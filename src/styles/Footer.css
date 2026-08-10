@@ -1,0 +1,25 @@
+.academic-footer {
+    border-top: 1px solid var(--border-muted);
+    background-color: var(--bg-dark);
+    padding: 30px 24px;
+    text-align: center;
+}
+
+.footer-credits p {
+    font-family: 'Lora', serif;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.footer-credits a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--border-muted);
+    transition: color 0.2s ease;
+}
+
+.footer-credits a:hover {
+    color: var(--text-primary);
+    border-bottom-style: solid;
+}

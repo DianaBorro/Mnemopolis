@@ -21,3 +21,10 @@
     line-height: 1.8;
     font-style: italic;
 }
+
+.dynamic-bookshelf-bg {
+    background: linear-gradient(rgba(18, 19, 17, 0.88), rgba(18, 19, 17, 0.94)),
+    url('../assets/books-dark-academia.jpg');
+    background-size: cover;
+    background-position: center;
+}

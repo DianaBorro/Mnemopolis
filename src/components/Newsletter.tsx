@@ -1,3 +1,4 @@
+import '../styles/Newsletter.css';
 import type {TranslatedComponentProps} from "../types.ts";
 
 function Newsletter({t}: TranslatedComponentProps) {

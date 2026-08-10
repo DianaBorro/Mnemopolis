@@ -1,3 +1,4 @@
+import '../styles/Footer.css';
 import type {TranslatedComponentProps} from "../types.ts";
 
 function Footer({t}: TranslatedComponentProps) {

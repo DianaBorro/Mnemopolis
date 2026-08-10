@@ -1,0 +1,63 @@
+.section-contact-signup {
+    padding: 110px 24px;
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+}
+
+.signup-overlay-box {
+    width: 100%;
+    max-width: 650px;
+    border: 1px solid var(--accent-gold);
+    padding: 55px 45px;
+    background-color: rgba(24, 25, 22, 0.75);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.signup-overlay-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.academia-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.academia-form input {
+    background-color: transparent;
+    border: 1px solid rgba(197, 168, 128, 0.4);
+    padding: 16px;
+    color: var(--text-primary);
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.academia-form input:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.form-submit-btn {
+    background-color: var(--accent-crimson);
+    color: var(--text-primary);
+    border: 1px solid transparent;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 16px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.form-submit-btn:hover {
+    background-color: #a1351e;
+    border-color: var(--accent-gold);
+}

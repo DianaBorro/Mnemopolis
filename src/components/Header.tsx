@@ -1,3 +1,4 @@
+import '../styles/Header.css';
 import type {HeaderProps} from "../types.ts";
 
 function Header({t, currentPage, setCurrentPage, toggleLanguage, currentLang}: HeaderProps) {

@@ -1,0 +1,69 @@
+.section-parchment-row {
+    background-color: var(--parchment-bg);
+    padding: 90px max(24px, calc((100% - 1100px) / 2));
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.parchment-content {
+    flex: 1.2;
+    text-align: left;
+    color: var(--text-dark);
+}
+
+.parchment-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 6px;
+    color: #1c1510;
+}
+
+.subheading-caps {
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #706253;
+    margin-bottom: 24px;
+}
+
+.parchment-content p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #383029;
+}
+
+.parchment-btn {
+    background-color: var(--text-dark);
+    color: var(--parchment-bg);
+    border: 1px solid transparent;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    padding: 12px 28px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.parchment-btn:hover {
+    background-color: transparent;
+    color: var(--text-dark);
+    border-color: var(--text-dark);
+}
+
+.parchment-image-container {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.placeholder-arch-frame {
+    width: 100%;
+    max-width: 360px;
+    height: 380px;
+    border-radius: 180px 180px 0 0; /* Renders architectural Gothic arch silhouette */
+    border: 1px solid var(--accent-gold);
+    background-color: #26211c;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8), 0 8px 25px rgba(0, 0, 0, 0.15);
+}

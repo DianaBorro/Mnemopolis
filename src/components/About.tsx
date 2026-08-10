@@ -1,3 +1,4 @@
+import '../styles/About.css';
 import type {TranslatedComponentProps} from "../types.ts";
 
 function About({t} : TranslatedComponentProps) {

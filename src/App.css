@@ -75,3 +75,30 @@
 .cta-btn:hover {
   background-color: #535bf2;
 }
+
+/* Fix the invisible subtitle contrast */
+.hero-section p {
+  color: #a0aec0 !important; /* Light grey/silver for dark mode readability */
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 24px auto;
+  line-height: 1.6;
+}
+
+/* Style the missing language toggle button */
+.lang-toggle-btn {
+  background: transparent !important;
+  border: 1px solid #646cff !important;
+  color: #646cff !important;
+  font-weight: 600;
+  padding: 8px 14px;
+  margin-left: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-toggle-btn:hover {
+  background-color: #646cff !important;
+  color: #ffffff !important;
+}

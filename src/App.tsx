@@ -1,7 +1,4 @@
 import {useState} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import {useTranslation} from "react-i18next";
 
@@ -22,29 +19,28 @@ function App() {
             case 'memory':
                 return (
                     <section className="content-section">
-                        <h2>Memory Techniques / Técnicas de Memoria</h2>
-                        <p>Master the Mind Palace, Loci Method, and Spaced Repetition.</p>
+                        <h2>{t('pages.memory.title')}</h2>
+                        <p>{t('pages.memory.desc')}</p>
                     </section>
                 )
             case 'blog':
                 return (
                     <section className="content-section">
-                        <h2>Blog & Articles</h2>
-                        <p>Read our latest posts about learning optimization and cognitive science.</p>
+                        <h2>{t('pages.blog.title')}</h2>
+                        <p>{t('pages.blog.desc')}</p>
                     </section>
                 )
             case 'subjects':
                 return (
                     <section className="content-section">
-                        <h2>Subjects / Materias</h2>
-                        <p>Explore specialized tracks for Programming, Languages, Math, and Science.</p>
+                        <h2>{t('pages.subjects.title')}</h2>
+                        <p>{t('pages.subjects.desc')}</p>
                     </section>
                 )
             case 'home':
             default:
                 return (
                     <section className="hero-section">
-                        <img src={heroImg} className="hero-banner" alt="Learning Hero"/>
                         <h1>{t('hero.title')}</h1>
                         <p>{t('hero.subtitle')}</p>
                         <button className="cta-btn" onClick={() => setCurrentPage('subjects')}>
@@ -59,11 +55,7 @@ function App() {
         <div className="site-container">
             {/* Navigation Header */}
             <header className="site-header">
-                <div className="logo-area">
-                    <img src={viteLogo} className="logo" alt="Vite logo"/>
-                    <img src={reactLogo} className="logo react" alt="React logo"/>
                     <span className="brand-name">Mnemopolis</span>
-                </div>
                 <nav className="nav-links">
                     <button
                         className={currentPage === 'home' ? 'active' : ''}

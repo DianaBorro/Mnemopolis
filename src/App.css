@@ -1,104 +1,138 @@
-.site-container {
-  font-family: system-ui, sans-serif;
-  color: #333;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Dark Academia Base Palette */
+:root {
+  --bg-dark: #121311;       /* Deep charcoal onyx */
+  --bg-card: #1c1d1a;       /* Dark slate/wood tone */
+  --accent-gold: #c5a880;   /* Muted antique gold */
+  --accent-crimson: #8c2d19;/* Oxblood university red */
+  --text-primary: #e6dfd3;  /* Warm parchment white */
+  --text-secondary: #b5ad9e;/* Muted sepia grey */
 }
 
+body {
+  background-color: var(--bg-dark);
+  margin: 0;
+}
+
+.site-container {
+  font-family: 'Lora', Georgia, serif;
+  color: var(--text-primary);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header & Brand styling */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  height: 2em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.2); /* Soft gold border */
 }
 
 .brand-name {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  color: var(--accent-gold);
 }
 
+/* Remove or tone down modern tech logos for the vibe */
+.logo {
+  height: 1.8em;
+  opacity: 0.65;
+  filter: sepia(0.8) hue-rotate(10deg); /* Blends tech logos into a vintage tint */
+}
+
+/* Nav Links as elegant scholarly tabs */
 .nav-links button {
   background: none;
   border: none;
-  padding: 10px 15px;
-  margin-left: 10px;
-  font-size: 1rem;
+  font-family: 'Lora', serif;
+  color: var(--text-secondary);
+  padding: 10px 16px;
+  margin-left: 8px;
+  font-size: 0.95rem;
   cursor: pointer;
-  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
 }
 
-.nav-links button:hover, .nav-links button.active {
-  background-color: #f0f0f0;
-  color: #646cff;
+.nav-links button:hover,
+.nav-links button.active {
+  color: var(--accent-gold);
+  background: none !important;
+  border-bottom: 2px solid var(--accent-gold);
 }
 
+/* Content & Hero layouts */
 .main-content {
-  padding: 40px 0;
+  padding: 60px 0;
   text-align: center;
 }
 
-.hero-banner {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 20px;
+.hero-section h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
 }
 
+.hero-section p {
+  color: var(--text-secondary) !important;
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto 36px auto;
+  line-height: 1.8;
+  font-style: italic; /* Gives it an old-world literary feel */
+}
+
+/* Hero Image Masking to soften modern graphics */
+.hero-banner {
+  max-width: 480px;
+  height: auto;
+  margin-bottom: 40px;
+  filter: sepia(0.4) contrast(1.1) brightness(0.9);
+  opacity: 0.85;
+}
+
+/* Call To Action - Renaissance styling */
 .cta-btn {
-  background-color: #646cff;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 8px;
+  background-color: var(--accent-crimson);
+  color: var(--text-primary);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  padding: 14px 32px;
+  font-size: 1.05rem;
   cursor: pointer;
-  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .cta-btn:hover {
-  background-color: #535bf2;
+  background-color: #a1351e;
+  border-color: var(--accent-gold);
+  transform: translateY(-1px);
 }
 
-/* Fix the invisible subtitle contrast */
-.hero-section p {
-  color: #a0aec0 !important; /* Light grey/silver for dark mode readability */
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto 24px auto;
-  line-height: 1.6;
-}
-
-/* Style the missing language toggle button */
+/* Multilingual Toggle Button */
 .lang-toggle-btn {
-  background: transparent !important;
-  border: 1px solid #646cff !important;
-  color: #646cff !important;
-  font-weight: 600;
-  padding: 8px 14px;
-  margin-left: 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  border: 1px solid var(--accent-gold) !important;
+  color: var(--accent-gold) !important;
+  font-family: 'Lora', serif;
+  font-size: 0.85rem !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 14px !important;
+  margin-left: 20px !important;
 }
 
 .lang-toggle-btn:hover {
-  background-color: #646cff !important;
-  color: #ffffff !important;
+  background-color: var(--accent-gold) !important;
+  color: var(--bg-dark) !important;
 }

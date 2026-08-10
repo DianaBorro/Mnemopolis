@@ -1,3 +1,5 @@
+/* src/App.css */
+
 :root {
   --bg-dark: #121311;         /* Deep charcoal onyx */
   --bg-card: #1c1d1a;         /* Dark slate/wood tone */
@@ -22,19 +24,24 @@ body {
 .site-container {
   font-family: 'Lora', Georgia, serif;
   color: var(--text-primary);
-  max-width: 100% !important; /* Overrides static caps for full-bleed background striping */
+  max-width: 100% !important;
+  width: 100% !important;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
 }
 
+/* Note: Keeping .site-header layout container rules here so it controls global grid spaces */
 .site-header {
-  display: flex;
-  justify-content: space-between;
+  display: flex !important;
+  justify-content: space-between !important;
   align-items: center;
   max-width: 1100px;
+  width: 100%;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 30px 24px;
-  border-bottom: 1px solid var(--border-muted);
+  border-bottom: 1px solid var(--border-muted) !important;
 }
 
 .brand-name {
@@ -46,14 +53,13 @@ body {
 }
 
 .main-content {
-  padding: 0; /* Handled inside inner layout modules */
+  padding: 0;
   text-align: center;
 }
 
 /* ==========================================
    Inner page layouts 
    ========================================== */
-
 .inner-page-hero {
   padding: 100px 24px;
   text-align: center;

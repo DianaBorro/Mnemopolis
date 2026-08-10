@@ -15,10 +15,13 @@ const enTranslations = {
         subtitle: "A polymath approach to mastering languages, code, and science through advanced memory techniques.",
         cta: "Start Learning"
     },
+    about: {
+        title: "About Mnemopolis"
+    },
     pages: {
         memory: {
             title: "Memory Techniques",
-            desc: "Master the Mind Palace, Loci Method, and Spaced Repetition systems."
+            desc: "Master Giordano Bruno's memory wheel, the mind palace technique and the grid technique."
         },
         blog: {
             title: "Scholarly Journal & Articles",
@@ -28,6 +31,14 @@ const enTranslations = {
             title: "Academic Disciplines",
             desc: "Explore specialized rigorous tracks for Programming, Languages, Math, and Science."
         }
+    },
+    newsletter: {
+        text: "Join the memory community!"
+    },
+    footer: {
+        booksText: "Books imagery by ",
+        archText: ". Architecture imagery by ",
+        viaText: " via Unsplash."
     }
 };
 
@@ -45,10 +56,13 @@ const esTranslations: typeof enTranslations = {
         subtitle: "Un enfoque polímata para dominar idiomas, código y ciencia a través de técnicas avanzadas de memoria.",
         cta: "Comenzar a Aprender"
     },
+    about: {
+        title: "Acerca de Mnemopolis"
+    },
     pages: {
         memory: {
             title: "Técnicas de Memoria",
-            desc: "Domina el Palacio de la Mente, el Método de Loci y los sistemas de Repetición Espaciada."
+            desc: "Aprende la rueda de la memoria de Giordano Bruno, la técnica del palacio mental y la técnica de la cuadrícula."
         },
         blog: {
             title: "Diario Académico y Artículos",
@@ -58,6 +72,14 @@ const esTranslations: typeof enTranslations = {
             title: "Disciplinas Académicas",
             desc: "Explora rutas especializadas y rigurosas para Programación, Idiomas, Matemáticas y Ciencia."
         }
+    },
+    newsletter: {
+        text: "¡Únete a la comunidad de la memoria!"
+    },
+    footer: {
+        booksText: "Imágenes de libros de ",
+        archText: ". Imágenes de arquitectura de ",
+        viaText: " vía Unsplash."
     }
 };
 

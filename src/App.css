@@ -1,33 +1,43 @@
-/* Dark Academia Base Palette */
+/* ==========================================
+   Dark Academia Core Theme Colors
+   ========================================== */
 :root {
-  --bg-dark: #121311;       /* Deep charcoal onyx */
-  --bg-card: #1c1d1a;       /* Dark slate/wood tone */
-  --accent-gold: #c5a880;   /* Muted antique gold */
-  --accent-crimson: #8c2d19;/* Oxblood university red */
-  --text-primary: #e6dfd3;  /* Warm parchment white */
-  --text-secondary: #b5ad9e;/* Muted sepia grey */
+  --bg-dark: #121311;         /* Deep charcoal onyx */
+  --bg-card: #1c1d1a;         /* Dark slate/wood tone */
+  --accent-gold: #c5a880;     /* Muted antique brass gold */
+  --accent-crimson: #8c2d19;  /* Oxblood university red */
+  --text-primary: #e6dfd3;    /* Warm parchment white */
+  --text-secondary: #b5ad9e;  /* Muted sepia grey */
+  --text-dark: #2c2520;       /* Rich dark ink for light rows */
+  --parchment-bg: #e6dfd3;    /* Cream vintage text rows */
+  --border-muted: rgba(197, 168, 128, 0.2);
 }
 
 body {
   background-color: var(--bg-dark);
   margin: 0;
+  padding: 0;
 }
 
+/* ==========================================
+   Global Layout Structure
+   ========================================== */
 .site-container {
   font-family: 'Lora', Georgia, serif;
   color: var(--text-primary);
-  max-width: 1100px;
+  max-width: 100% !important; /* Overrides static caps for full-bleed background striping */
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0;
 }
 
-/* Header & Brand styling */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
-  border-bottom: 1px solid rgba(197, 168, 128, 0.2); /* Soft gold border */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 24px;
+  border-bottom: 1px solid var(--border-muted);
 }
 
 .brand-name {
@@ -38,14 +48,14 @@ body {
   color: var(--accent-gold);
 }
 
-/* Remove or tone down modern tech logos for the vibe */
-.logo {
-  height: 1.8em;
-  opacity: 0.65;
-  filter: sepia(0.8) hue-rotate(10deg); /* Blends tech logos into a vintage tint */
+.main-content {
+  padding: 0; /* Handled inside inner layout modules */
+  text-align: center;
 }
 
-/* Nav Links as elegant scholarly tabs */
+/* ==========================================
+   Navigation Items
+   ========================================== */
 .nav-links button {
   background: none;
   border: none;
@@ -66,61 +76,6 @@ body {
   border-bottom: 2px solid var(--accent-gold);
 }
 
-/* Content & Hero layouts */
-.main-content {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.hero-section h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.2rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  margin-bottom: 16px;
-  letter-spacing: -0.5px;
-}
-
-.hero-section p {
-  color: var(--text-secondary) !important;
-  font-size: 1.2rem;
-  max-width: 650px;
-  margin: 0 auto 36px auto;
-  line-height: 1.8;
-  font-style: italic; /* Gives it an old-world literary feel */
-}
-
-/* Hero Image Masking to soften modern graphics */
-.hero-banner {
-  max-width: 480px;
-  height: auto;
-  margin-bottom: 40px;
-  filter: sepia(0.4) contrast(1.1) brightness(0.9);
-  opacity: 0.85;
-}
-
-/* Call To Action - Renaissance styling */
-.cta-btn {
-  background-color: var(--accent-crimson);
-  color: var(--text-primary);
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border: 1px solid rgba(197, 168, 128, 0.3);
-  padding: 14px 32px;
-  font-size: 1.05rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-}
-
-.cta-btn:hover {
-  background-color: #a1351e;
-  border-color: var(--accent-gold);
-  transform: translateY(-1px);
-}
-
-/* Multilingual Toggle Button */
 .lang-toggle-btn {
   border: 1px solid var(--accent-gold) !important;
   color: var(--accent-gold) !important;
@@ -136,3 +91,322 @@ body {
   background-color: var(--accent-gold) !important;
   color: var(--bg-dark) !important;
 }
+
+/* ==========================================
+   Section 1: Hero Block Layout
+   ========================================== */
+.section-hero {
+  padding: 80px 24px;
+  text-align: center;
+  background-color: var(--bg-dark);
+}
+
+.hero-text-block h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero-text-block p {
+  color: var(--text-secondary) !important;
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto 36px auto;
+  line-height: 1.8;
+  font-style: italic;
+}
+
+/* ==========================================
+   Section 2: Three-Column Card Grid
+   ========================================== */
+.section-cards-block {
+  background-color: #161714; /* Slightly darker shift for content contrast */
+  padding: 90px 24px;
+  text-align: center;
+  border-top: 1px solid var(--border-muted);
+  border-bottom: 1px solid var(--border-muted);
+}
+
+.cards-intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.cards-intro p {
+  color: var(--text-secondary);
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 1.05rem;
+}
+
+.cards-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.academia-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-muted);
+  padding: 45px 30px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.academia-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--accent-gold);
+  font-size: 1.35rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-muted);
+  padding-bottom: 14px;
+}
+
+.academia-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==========================================
+   Section 3: Vintage Parchment Strip
+   ========================================== */
+.section-parchment-row {
+  background-color: var(--parchment-bg);
+  padding: 90px max(24px, calc((100% - 1100px) / 2));
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.parchment-content {
+  flex: 1.2;
+  text-align: left;
+  color: var(--text-dark);
+}
+
+.parchment-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-top: 0;
+  margin-bottom: 6px;
+  color: #1c1510;
+}
+
+.subheading-caps {
+  font-size: 0.85rem;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #706253;
+  margin-bottom: 24px;
+}
+
+.parchment-content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #383029;
+}
+
+.parchment-btn {
+  background-color: var(--text-dark);
+  color: var(--parchment-bg);
+  border: 1px solid transparent;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  padding: 12px 28px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.parchment-btn:hover {
+  background-color: transparent;
+  color: var(--text-dark);
+  border-color: var(--text-dark);
+}
+
+.parchment-image-container {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+}
+
+.placeholder-arch-frame {
+  width: 100%;
+  max-width: 360px;
+  height: 380px;
+  border-radius: 180px 180px 0 0; /* Renders architectural Gothic arch silhouette */
+  border: 1px solid var(--accent-gold);
+  background-color: #26211c;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8), 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+   Section 4: Academy Gateway Signup Form
+   ========================================== */
+.section-contact-signup {
+  padding: 110px 24px;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+}
+
+.signup-overlay-box {
+  width: 100%;
+  max-width: 650px;
+  border: 1px solid var(--accent-gold);
+  padding: 55px 45px;
+  background-color: rgba(24, 25, 22, 0.75);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.signup-overlay-box h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.academia-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.academia-form input {
+  background-color: transparent;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  padding: 16px;
+  color: var(--text-primary);
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.academia-form input:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+.form-submit-btn {
+  background-color: var(--accent-crimson);
+  color: var(--text-primary);
+  border: 1px solid transparent;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 16px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.form-submit-btn:hover {
+  background-color: #a1351e;
+  border-color: var(--accent-gold);
+}
+
+/* ==========================================
+   Pure CSS Crest Alternative
+   ========================================== */
+.academic-crest {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 40px auto;
+  border: 1px double var(--accent-gold);
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crest-inner-diamond {
+  width: 70%;
+  height: 70%;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crest-core-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-crimson);
+  border-radius: 50%;
+}
+
+.dynamic-bookshelf-bg {
+  background: linear-gradient(rgba(18, 19, 17, 0.88), rgba(18, 19, 17, 0.94)),
+  url('./assets/books-dark-academia.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.target-cathedral-arch {
+  background-image: url('./assets/volta-dark-academia.jpg') !important; 
+  background-size: cover;
+  background-position: center;
+}
+
+/* Styling for inner page layouts to prevent header jumps */
+.inner-page-hero {
+  padding: 100px 24px;
+  text-align: center;
+  background-color: var(--bg-dark);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.inner-page-hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: var(--accent-gold);
+  margin-bottom: 20px;
+}
+
+.inner-page-hero p {
+  font-family: 'Lora', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Minimalist Dark Academia Footer Credits */
+.academic-footer {
+  border-top: 1px solid var(--border-muted);
+  background-color: var(--bg-dark);
+  padding: 30px 24px;
+  text-align: center;
+}
+
+.footer-credits p {
+  font-family: 'Lora', serif;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.footer-credits a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--border-muted);
+  transition: color 0.2s ease;
+}
+
+.footer-credits a:hover {
+  color: var(--text-primary);
+  border-bottom-style: solid;
+}
+

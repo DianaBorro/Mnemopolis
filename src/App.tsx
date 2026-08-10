@@ -1,6 +1,12 @@
 import {useState} from 'react'
 import './App.css'
-import {useTranslation} from "react-i18next";
+import {useTranslation} from 'react-i18next';
+import Hero from "./components/Hero.tsx";
+import IntroductionCards from "./components/IntroductionCards.tsx";
+import About from "./components/About.tsx";
+import Newsletter from "./components/Newsletter.tsx";
+import Header from "./components/Header.tsx";
+import Footer from "./components/Footer.tsx";
 
 function App() {
     // State to track the active page navigation
@@ -18,79 +24,60 @@ function App() {
         switch (currentPage) {
             case 'memory':
                 return (
-                    <section className="content-section">
-                        <h2>{t('pages.memory.title')}</h2>
-                        <p>{t('pages.memory.desc')}</p>
-                    </section>
+                    <div className="academia-wrapper">
+                        <section className="inner-page-hero">
+                            <h2>{t('pages.memory.title')}</h2>
+                            <p>{t('pages.memory.desc')}</p>
+                        </section>
+                    </div>
                 )
             case 'blog':
                 return (
-                    <section className="content-section">
-                        <h2>{t('pages.blog.title')}</h2>
-                        <p>{t('pages.blog.desc')}</p>
-                    </section>
+                    <div className="academia-wrapper">
+                        <section className="inner-page-hero">
+                            <h2>{t('pages.blog.title')}</h2>
+                            <p>{t('pages.blog.desc')}</p>
+                        </section>
+                    </div>
                 )
             case 'subjects':
                 return (
-                    <section className="content-section">
-                        <h2>{t('pages.subjects.title')}</h2>
-                        <p>{t('pages.subjects.desc')}</p>
-                    </section>
+                    <div className="academia-wrapper">
+                        <section className="inner-page-hero">
+                            <h2>{t('pages.subjects.title')}</h2>
+                            <p>{t('pages.subjects.desc')}</p>
+                        </section>
+                    </div>
                 )
             case 'home':
             default:
                 return (
-                    <section className="hero-section">
-                        <h1>{t('hero.title')}</h1>
-                        <p>{t('hero.subtitle')}</p>
-                        <button className="cta-btn" onClick={() => setCurrentPage('subjects')}>
-                            {t('hero.cta')}
-                        </button>
-                    </section>
+                    <div className="academia-wrapper">
+                        <Hero t={t}/>
+                        <IntroductionCards t={t}/>
+                        <About t={t}/>
+                        <Newsletter t={t}/>
+                    </div>
                 )
         }
     }
 
     return (
         <div className="site-container">
-            {/* Navigation Header */}
-            <header className="site-header">
-                    <span className="brand-name">Mnemopolis</span>
-                <nav className="nav-links">
-                    <button
-                        className={currentPage === 'home' ? 'active' : ''}
-                        onClick={() => setCurrentPage('home')}
-                    >
-                        {t('nav.home')}
-                    </button>
-                    <button
-                        className={currentPage === 'memory' ? 'active' : ''}
-                        onClick={() => setCurrentPage('memory')}
-                    >
-                        {t('nav.memory')}
-                    </button>
-                    <button
-                        className={currentPage === 'blog' ? 'active' : ''}
-                        onClick={() => setCurrentPage('blog')}
-                    >
-                        {t('nav.blog')}
-                    </button>
-                    <button
-                        className={currentPage === 'subjects' ? 'active' : ''}
-                        onClick={() => setCurrentPage('subjects')}
-                    >
-                        {t('nav.subjects')}
-                    </button>
-                    <button className="lang-toggle-btn" onClick={toggleLanguage}>
-                        🌐 {i18n.language === 'en' ? 'Español' : 'English'}
-                    </button>
-                </nav>
-            </header>
+            <Header
+                t={t}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                toggleLanguage={toggleLanguage}
+                currentLang={i18n.language}
+            />
 
             {/* Main Dynamic Content Container */}
             <main className="main-content">
                 {renderPageContent()}
             </main>
+
+            <Footer t={t}/>
         </div>
     )
 }

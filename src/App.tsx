@@ -1,16 +1,16 @@
 import {useState} from 'react'
 import './App.css'
 import {useTranslation} from 'react-i18next';
-import Hero from "./components/Hero.tsx";
-import IntroductionCards from "./components/IntroductionCards.tsx";
-import About from "./components/About.tsx";
-import Newsletter from "./components/Newsletter.tsx";
 import Header from "./components/Header.tsx";
 import Footer from "./components/Footer.tsx";
+import MemoryPage from "./pages/MemoryPage.tsx";
+import BlogPage from "./pages/BlogPage.tsx";
+import SubjectsPage from "./pages/SubjectPage.tsx";
+import HomePage from "./pages/HomePage.tsx";
 
 function App() {
     const [currentPage, setCurrentPage] = useState('home');
-    const {t, i18n} = useTranslation() 
+    const {t, i18n} = useTranslation(['common', 'pages'])
 
     const toggleLanguage = () => {
         const nextLang = i18n.language === 'en' ? 'es' : 'en'
@@ -19,43 +19,11 @@ function App() {
 
     const renderPageContent = () => {
         switch (currentPage) {
-            case 'memory':
-                return (
-                    <div className="academia-wrapper">
-                        <section className="inner-page-hero">
-                            <h2>{t('pages.memory.title')}</h2>
-                            <p>{t('pages.memory.desc')}</p>
-                        </section>
-                    </div>
-                )
-            case 'blog':
-                return (
-                    <div className="academia-wrapper">
-                        <section className="inner-page-hero">
-                            <h2>{t('pages.blog.title')}</h2>
-                            <p>{t('pages.blog.desc')}</p>
-                        </section>
-                    </div>
-                )
-            case 'subjects':
-                return (
-                    <div className="academia-wrapper">
-                        <section className="inner-page-hero">
-                            <h2>{t('pages.subjects.title')}</h2>
-                            <p>{t('pages.subjects.desc')}</p>
-                        </section>
-                    </div>
-                )
+            case 'memory':      return <MemoryPage/>;
+            case 'blog':        return <BlogPage/>
+            case 'subjects':    return <SubjectsPage/>;
             case 'home':
-            default:
-                return (
-                    <div className="academia-wrapper">
-                        <Hero t={t}/>
-                        <IntroductionCards t={t} setCurrentPage={setCurrentPage} />
-                        <About t={t}/>
-                        <Newsletter t={t}/>
-                    </div>
-                )
+            default:            return <HomePage setCurrentPage={setCurrentPage}/>
         }
     }
 

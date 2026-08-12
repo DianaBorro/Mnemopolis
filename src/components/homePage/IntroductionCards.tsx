@@ -1,10 +1,13 @@
-import '../styles/IntroductionCards.css';
-import type {TranslatedComponentProps} from "../types.ts";
+import { useTranslation } from 'react-i18next'; 
+import '../../styles/IntroductionCards.css';
 
-interface IntroCardsProps extends TranslatedComponentProps {
+interface IntroCardsProps {
     setCurrentPage: (page: string) => void;
 }
-function IntroductionCards({t, setCurrentPage} : IntroCardsProps) {
+
+export default function IntroductionCards({ setCurrentPage }: IntroCardsProps) {
+    const { t } = useTranslation(['common', 'pages']);
+
     return (
         <section className="section-cards-block">
             <div className="cards-intro">
@@ -13,19 +16,18 @@ function IntroductionCards({t, setCurrentPage} : IntroCardsProps) {
             </div>
             <div className="cards-grid">
                 <button className="academia-card" onClick={() => setCurrentPage('memory')}>
-                    <h3>{t('nav.memory')}</h3>
-                    <p>{t('pages.memory.desc')}</p>
+                    <h3>{t('common:nav.memory')}</h3>
+                    <p>{t('pages:memory.desc')}</p>
                 </button>
                 <button className="academia-card" onClick={() => setCurrentPage('blog')}>
-                    <h3>{t('nav.blog')}</h3>
-                    <p>{t('pages.blog.desc')}</p>
+                    <h3>{t('common:nav.blog')}</h3>
+                    <p>{t('pages:blog.desc')}</p>
                 </button>
                 <button className="academia-card" onClick={() => setCurrentPage('subjects')}>
-                    <h3>{t('nav.subjects')}</h3>
-                    <p>{t('pages.subjects.desc')}</p>
+                    <h3>{t('common:nav.subjects')}</h3>
+                    <p>{t('pages:subjects.desc')}</p>
                 </button>
             </div>
         </section>
-    )
+    );
 }
-export default IntroductionCards;

@@ -11,8 +11,8 @@ export default function IntroductionCards({ setCurrentPage }: IntroCardsProps) {
     return (
         <section className="section-cards-block">
             <div className="cards-intro">
-                <h2>Lorem ipsum dolor sit amet consectetur</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                <h2>{t('pages:introduction.title')}</h2>
+                <p>{t('pages:introduction.text')}</p>
             </div>
             <div className="cards-grid">
                 <button className="academia-card" onClick={() => setCurrentPage('memory')}>

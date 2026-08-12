@@ -15,6 +15,7 @@ export const common = {
     footer: {
         booksText: "Books imagery by ",
         archText: ". Architecture imagery by ",
-        viaText: " via Unsplash."
+        viaText: " via Unsplash.",
+        contactMe: "Contact Me:",
     }
 };

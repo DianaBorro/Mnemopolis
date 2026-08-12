@@ -1,4 +1,4 @@
-import { common as enCommon } from '../english/common';
+import { common as enCommon } from '../en/common';
 
 export const common: typeof enCommon = {
     brand: "Mnemópolis",
@@ -17,6 +17,7 @@ export const common: typeof enCommon = {
     footer: {
         booksText: "Imágenes de libros de ",
         archText: ". Imágenes de arquitectura de ",
-        viaText: " vía Unsplash."
+        viaText: " vía Unsplash.",
+        contactMe: "Contáctame:",
     }
 };

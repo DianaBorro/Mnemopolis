@@ -2,25 +2,29 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 // English Core Namespaces
-import { common as enCommon } from './locales/english/common';
-import { hero as enHero } from './locales/english/hero';
-import { pages as enPages } from './locales/english/pages';
+import { common as enCommon } from './locales/en/common';
+import { hero as enHero } from './locales/en/hero';
+import { pages as enPages } from './locales/en/pages';
+import {about as enAbout} from './locales/en/about';
 
 // Spanish Core Namespaces
-import { common as esCommon } from './locales/spanish/common';
-import { hero as esHero } from './locales/spanish/hero';
-import { pages as esPages } from './locales/spanish/pages';
+import { common as esCommon } from './locales/es/common';
+import { hero as esHero } from './locales/es/hero';
+import { pages as esPages } from './locales/es/pages';
+import { about as esAbout } from './locales/es/about';
 
 const resources = {
     en: {
         common: enCommon,
         hero: enHero,
-        pages: enPages
+        pages: enPages,
+        about: enAbout,
     },
     es: {
         common: esCommon,
         hero: esHero,
-        pages: esPages
+        pages: esPages,
+        about: esAbout,
     }
 } as const;
 

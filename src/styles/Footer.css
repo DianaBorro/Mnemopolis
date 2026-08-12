@@ -1,25 +1,60 @@
 .academic-footer {
-    border-top: 1px solid var(--border-muted);
-    background-color: var(--bg-dark);
-    padding: 30px 24px;
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: #0d0d0d; /* Deep dark background */
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
     text-align: center;
 }
 
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #888;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-link {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.social-link:hover {
+    color: #0077b5; /* Or your preferred brand accent color */
+}
+
 .footer-credits p {
-    font-family: 'Lora', serif;
     font-size: 0.8rem;
-    color: var(--text-secondary);
-    margin: 0;
+    color: #555;
 }
 
 .footer-credits a {
-    color: var(--accent-gold);
-    text-decoration: none;
-    border-bottom: 1px dashed var(--border-muted);
-    transition: color 0.2s ease;
+    color: #777;
+    text-decoration: underline;
 }
 
 .footer-credits a:hover {
-    color: var(--text-primary);
-    border-bottom-style: solid;
+    color: #aaa;
 }

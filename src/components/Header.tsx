@@ -1,40 +1,62 @@
+import { useState } from 'react';
 import '../styles/Header.css';
-import type {HeaderProps} from "../types.ts";
+import type { HeaderProps } from "../types.ts";
 
-function Header({t, currentPage, setCurrentPage, toggleLanguage, currentLang}: HeaderProps) {
+function Header({ t, currentPage, setCurrentPage, toggleLanguage, currentLang }: HeaderProps) {
+    const [isMobileSandwichMenuOpen, setIsMobileSandwichMenuOpen] = useState(false);
+
+    const navigateTo = (page: string) => {
+        setCurrentPage(page);
+        setIsMobileSandwichMenuOpen(false); 
+    };
+
     return (
         <header className="site-header">
-            <span className="brand-name">Mnemopolis</span>
-            <nav className="nav-links">
+            <div className="header-top-bar">
+                <span className="brand-name" onClick={() => navigateTo('home')}>Mnemopolis</span>
+
+                <button
+                    className={`hamburger-btn ${isMobileSandwichMenuOpen ? 'open' : ''}`}
+                    onClick={() => setIsMobileSandwichMenuOpen(!isMobileSandwichMenuOpen)}
+                    aria-label="Menu"
+                >
+                    <span className="burger-line"></span>
+                    <span className="burger-line"></span>
+                    <span className="burger-line"></span>
+                </button>
+            </div>
+
+            <nav className={`nav-links ${isMobileSandwichMenuOpen ? 'active' : ''}`}>
                 <button
                     className={currentPage === 'home' ? 'active' : ''}
-                    onClick={() => setCurrentPage('home')}
+                    onClick={() => navigateTo('home')}
                 >
                     {t('nav.home')}
                 </button>
                 <button
                     className={currentPage === 'memory' ? 'active' : ''}
-                    onClick={() => setCurrentPage('memory')}
+                    onClick={() => navigateTo('memory')}
                 >
                     {t('nav.memory')}
                 </button>
                 <button
                     className={currentPage === 'blog' ? 'active' : ''}
-                    onClick={() => setCurrentPage('blog')}
+                    onClick={() => navigateTo('blog')}
                 >
                     {t('nav.blog')}
                 </button>
                 <button
                     className={currentPage === 'subjects' ? 'active' : ''}
-                    onClick={() => setCurrentPage('subjects')}
+                    onClick={() => navigateTo('subjects')}
                 >
                     {t('nav.subjects')}
                 </button>
                 <button className="lang-toggle-btn" onClick={toggleLanguage}>
-                    🌐 {currentLang === 'en' ? 'Español' : 'English'}
+                    🌐 {currentLang === 'english' || currentLang === 'en' ? 'Español' : 'English'}
                 </button>
             </nav>
         </header>
-    )
+    );
 }
+
 export default Header;

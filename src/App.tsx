@@ -41,7 +41,7 @@ function App() {
                 {renderPageContent()}
             </main>
 
-            <Footer t={t}/>
+            <Footer/>
         </div>
     )
 }

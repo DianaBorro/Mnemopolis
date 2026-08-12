@@ -6,7 +6,7 @@ interface IntroCardsProps {
 }
 
 export default function IntroductionCards({ setCurrentPage }: IntroCardsProps) {
-    const { t } = useTranslation(['common', 'pages']);
+    const { t } = useTranslation(['common', 'pages', 'memoryPage']);
 
     return (
         <section className="section-cards-block">
@@ -17,7 +17,7 @@ export default function IntroductionCards({ setCurrentPage }: IntroCardsProps) {
             <div className="cards-grid">
                 <button className="academia-card" onClick={() => setCurrentPage('memory')}>
                     <h3>{t('common:nav.memory')}</h3>
-                    <p>{t('pages:memory.desc')}</p>
+                    <p>{t('memoryPage:desc')}</p>
                 </button>
                 <button className="academia-card" onClick={() => setCurrentPage('blog')}>
                     <h3>{t('common:nav.blog')}</h3>

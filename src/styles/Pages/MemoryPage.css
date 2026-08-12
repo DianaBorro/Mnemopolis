@@ -18,7 +18,6 @@
     line-height: 1.6;
 }
 
-/* 🎛️ Configuración de la cuadrícula de la rueda */
 .bruno-wheel-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -26,7 +25,6 @@
     padding: 1rem 0;
 }
 
-/* 🎴 Tarjetas individuales para cada letra */
 .myth-card {
     background-color: #121212;
     border: 1px solid #222;
@@ -40,7 +38,7 @@
 
 .myth-card:hover {
     transform: translateY(-4px);
-    border-color: #a33827; /* Destello rojo terracota al pasar el mouse */
+    border-color: #a33827;
 }
 
 .myth-header {
@@ -50,7 +48,6 @@
     margin-bottom: 1rem;
 }
 
-/* 🪙 El token circular con la letra del alfabeto */
 .alphabet-token {
     background-color: #a33827;
     color: #fff;
@@ -76,10 +73,9 @@
     color: #aaa;
     line-height: 1.6;
     margin-bottom: 1.5rem;
-    text-align: left; /* Alineado a la izquierda para mejor lectura */
+    text-align: left; 
 }
 
-/* 🏷️ Contenedor de etiquetas de memoria */
 .mnemonic-tags {
     display: flex;
     gap: 0.5rem;
@@ -94,4 +90,25 @@
     border-radius: 4px;
     font-size: 0.8rem;
     text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .inner-page-hero h1 {
+        font-size: 2rem; 
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .bruno-wheel-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .myth-card {
+        padding: 1.5rem;
+    }
 }

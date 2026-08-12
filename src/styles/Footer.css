@@ -4,6 +4,7 @@
     background-color: #0d0d0d;
     border-top: 1px solid #1a1a1a;
     box-sizing: border-box;
+    margin-top: auto;
 }
 
 /* 🛠️ This forces everything to align symmetrically down the middle */

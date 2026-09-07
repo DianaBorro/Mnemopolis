@@ -13,5 +13,10 @@ export const pages = {
         title: "Materias",
         desc: "Mira ejemplos sobre cómo usar técnicas " +
             "de memorización para aprender programación, idiomas, matemáticas y ciencias."
+    },
+    exercisesOfTheDay: {
+        title: "Ejercicios del día:",
+        exercise: "Ejercicio",
+        sessionDate: "Fecha de la sesión: ",
     }
 } as const;

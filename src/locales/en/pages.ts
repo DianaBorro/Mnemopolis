@@ -12,5 +12,10 @@ export const pages = {
     subjects: {
         title: "Subjects",
         desc: "See examples on how to use memory techniques to learn Programming, Languages, Math, and Science."
+    },
+    exercisesOfTheDay: {
+        title: "Exercises of the day:",
+        exercise: "Exercise",
+        sessionDate: "Session Date: ",
     }
 } as const; 

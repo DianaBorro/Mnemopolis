@@ -1,5 +1,5 @@
 .section-cards-block {
-    background-color: #161714; /* Slightly darker shift for content contrast */
+    background-color: #161714; 
     padding: 90px 24px;
     text-align: center;
     border-top: 1px solid var(--border-muted);
@@ -67,4 +67,21 @@
     font-size: 0.95rem;
     line-height: 1.7;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .section-cards-block {
+        padding: 40px 16px !important;
+    }
+
+    .cards-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.25rem !important;
+    }
+
+    .academia-card {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
 }

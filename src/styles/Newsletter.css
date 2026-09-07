@@ -61,3 +61,22 @@
     background-color: #a1351e;
     border-color: var(--accent-gold);
 }
+
+@media (max-width: 768px) {
+    .newsletter-section {
+        padding: 40px 16px !important;
+    }
+
+    .newsletter-form {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}

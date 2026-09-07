@@ -1,0 +1,114 @@
+.inner-page-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.inner-page-hero h1 {
+    font-size: 3rem;
+    color: #f5f5f5;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.bruno-wheel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.myth-card {
+    background-color: #121212;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.myth-card:hover {
+    transform: translateY(-4px);
+    border-color: #a33827;
+}
+
+.myth-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.alphabet-token {
+    background-color: #a33827;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+}
+
+.myth-header h3 {
+    font-size: 1.4rem;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.myth-story {
+    font-size: 0.95rem;
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: left; 
+}
+
+.mnemonic-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag-element {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    color: #ccc;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .inner-page-hero h1 {
+        font-size: 2rem; 
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .bruno-wheel-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .myth-card {
+        padding: 1.5rem;
+    }
+}

@@ -28,3 +28,19 @@
     background-size: cover;
     background-position: center;
 }
+
+@media (max-width: 768px) {
+    .section-hero, .hero-text-block {
+        padding: 60px 16px !important;
+    }
+
+    .section-hero h1, .hero-text-block h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .section-hero p, .hero-text-block p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+}

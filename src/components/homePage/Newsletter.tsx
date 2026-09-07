@@ -1,7 +1,9 @@
-import '../styles/Newsletter.css';
-import type {TranslatedComponentProps} from "../types.ts";
+import '../../styles/Newsletter.css';
+import {useTranslation} from "react-i18next";
 
-function Newsletter({t}: TranslatedComponentProps) {
+function Newsletter() {
+    const { t } = useTranslation('common');
+
     return (
         <section className="section-contact-signup">
             <div className="signup-overlay-box">

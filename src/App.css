@@ -78,3 +78,12 @@ body {
   line-height: 1.8;
   color: var(--text-secondary);
 }
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 24px 16px !important;
+    text-align: center;
+  }
+}

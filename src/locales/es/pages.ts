@@ -18,5 +18,8 @@ export const pages = {
         title: "Ejercicios del día:",
         exercise: "Ejercicio",
         sessionDate: "Fecha de la sesión: ",
+        checkSolution: "Comprobar la solución",
+        hideSolution: "Ocultar la solución",
+        solution: "Solución: "
     }
 } as const;

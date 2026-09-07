@@ -17,5 +17,8 @@ export const pages = {
         title: "Exercises of the day:",
         exercise: "Exercise",
         sessionDate: "Session Date: ",
+        checkSolution: "Check Solution",
+        hideSolution: "Hide Solution",
+        solution: "Solution: "
     }
 } as const; 
